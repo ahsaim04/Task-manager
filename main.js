@@ -77,9 +77,8 @@ async function loadTodos() {
         } else if (currentStatus === 'inprogress') {
           newStatus = 'completed';
           
-        } else if (currentStatus === 'completed') {
-          newStatus = 'todo';
-         
+        } else (currentStatus === 'completed') {
+             newStatus = 'completed';
         }
 
         await updateTaskStatus(id, newStatus);
